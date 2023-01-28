@@ -21,5 +21,8 @@ public interface PropertiesOfInterface {
         System.out.println("Static method");
     }
     public abstract void method3();
+    public  default void method4(){
+        System.out.println("Default method");
+    }
 
 }
