@@ -16,8 +16,29 @@ public class ListSetPractice {
 
         System.out.println("list = " + list);
 
-        List<String> names = null;
-        System.out.println("names = " + names.size());
+       //List<String> names = null;
+       // System.out.println("names = " + names.size());
+
+        System.out.println("----------------------------------------------");
+
+        List<Character> chars = new Stack<>();
+        chars.addAll(Arrays.asList('A', 'B', 'C', 'D'));
+
+        ( (Stack)chars ).pop();
+
+        System.out.println("chars = " + chars);
+
+        //poll ==> FIFO    first in first out
+        //pop ==> LIFO     last in first out
+
+        List<String> names = new LinkedList<>();
+        names.addAll(Arrays.asList("James", "Jimmy", "Kathy", "Breanna", "Max"));
+
+        System.out.println(names);
+
+        ((LinkedList<String>) names).poll();
+
+        System.out.println( names);
 
 
     }
