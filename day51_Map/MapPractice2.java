@@ -49,8 +49,47 @@ public class MapPractice2 {
 
         int count = 0;
 
+        for (Map.Entry<String, Integer> pairs : map.entrySet()) {
+            if (pairs.getValue() > 120000 && pairs.getValue() < 150000){
+                count ++;
+            }
 
+        }
+        System.out.println("count = " + count);
+        /*
 
+        int count = 0;
+
+        for (Integer eachValue : map.values()) {
+            if(eachValue >= 120000 && eachValue <= 150000){
+                count++;
+            }
+        }
+
+        System.out.println(count);
+         */
+
+        System.out.println("----------------------------------------------");
+
+        //   1.4 display the names of the employees who are making less than 118k?
+        for (Map.Entry<String, Integer> pairs : map.entrySet()) {
+            if(pairs.getValue() < 118000){
+                System.out.println(pairs.getKey());
+            }
+
+        }
+
+        System.out.println("----------------------------------------------");
+
+        // 1.5 increase the salary employee by 10K if the current salary of employee is less than 120K
+
+        System.out.println(map);
+        for (Map.Entry<String, Integer> pairs : map.entrySet()) {
+            if (pairs.getValue() < 120000) {
+                pairs.setValue(pairs.getValue() + 10000);
+            }
+        }
+        System.out.println(map);
 
 
     }
